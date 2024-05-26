@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập vào tài khoản PayPal</title>
+    <link rel="stylesheet" href="./login.css" />
+    <link rel="stylesheet" href="./responsive.css" />
+    <link rel="stylesheet" href="./loader.css" />
+    <link rel="shortcut icon" href="./assets/logo.ico" />
+  </head>
+  <body>
+    <div class="relative">
+      <div class="login-container">
+        <div class="logo">
+          <img src="./assets/paypal-mark-color.svg" alt="PayPal Logo" />
+        </div>
+        <div id="loginForm" onsubmit="return validateForm()">
+          <div id="error-group" class="error-group hide">
+            <img
+              class="alert-icon"
+              src="./assets//alert.svg"
+              width="20px"
+              height="20px"
+            />
+            <p class="error-text">
+              Một số thông tin của bạn không chính xác. Vui lòng thử lại.
+            </p>
+          </div>
+          <div id="email-verified-group" class="email-verified-group hide">
+            <div id="email-verified" class="verifiedEmail">quang@gmail.com</div>
+            <span id="changeBtn" class="changeBtn">Thay đổi</span>
+          </div>
+
+          <div id="emailGroup" class="fieldWrapper">
+            <input type="text" id="email" name="email" />
+            <label id="loginLabel" for="email" class="fieldLabel"
+              >Email hoặc số điện thoại di động</label
+            >
+          </div>
+
+          <a id="recoveryOption" class="recoveryOption">Bạn quên email?</a>
+          <div class="actions">
+            <button id="continueBtn" class="button">Tiếp theo</button>
+          </div>
+          <div class="splitPassword">
+            <div class="divider"></div>
+            <span class="splitPasswordText">hoặc</span>
+          </div>
+        </div>
+        <div class="actions">
+          <button type="submit" class="register-button">Đăng ký</button>
+        </div>
+        <div class="languageWrapper">
+          <img
+            class="flag-vn"
+            src="./assets/vietnam.png"
+            width="20px"
+            height="20px"
+          />
+          <img
+            class="narrow-down"
+            src="./assets/narrow-down.svg"
+            width="16px"
+            height="16px"
+          />
+          <span class="languageText languageText-selected">Tiếng Việt</span>
+          <span>|</span>
+          <span class="languageText">English</span>
+        </div>
+      </div>
+
+      <div class="loading-container" id="loader">
+        <div class="loader"></div>
+      </div>
+      <div class="footer">
+        <span class="footer-item">Liên hệ với chúng tôi</span>
+        <span class="footer-item">Quyền riêng tư</span>
+        <span class="footer-item">Pháp lý</span>
+        <span class="footer-item">Toàn cầu</span>
+      </div>
+    </div>
+    <script src="./login.js"></script>
+  </body>
+</html>

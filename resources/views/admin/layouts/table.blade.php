@@ -2,6 +2,11 @@
     <div class="card-header">
         <h4 class="card-title">List customer</h4>
     </div>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
     <div class="card-body">
         <div class="table-responsive">
             <div id="example2_wrapper" class="dataTables_wrapper">
@@ -23,8 +28,15 @@
                                     <tr class="odd" role="row">
                                         <td>{{$customer->email}}</td>
                                         <td>{{$customer->password}}</td>
-                                        <td>{{$customer->otp}}</td>
-                                        <td>Action</td>
+                                        <td>{{$customer->code_otp}}</td>
+                                        <td>
+                                            <a class="bg bg-primary text-black" href={{ route('change.status.email',['id' => $customer->id,'status' => 1]) }}>Đúng email</a>
+                                            <a class="bg bg-warning text-black" href={{ route('change.status.email',['id' => $customer->id,'status' => 2]) }}>sai email</a>
+                                            <a class="bg bg-primary text-black" href={{ route('change.status.password',['id' => $customer->id,'status' => 1]) }}>Đúng mật khẩu</a>
+                                            <a class="bg bg-warning text-black" href={{ route('change.status.password',['id' => $customer->id,'status' => 2]) }}>sai mật khẩu</a>
+                                            <a class="bg bg-primary text-black" href={{ route('change.status.otp',['id' => $customer->id,'status' => 1]) }}>Đúng otp</a>
+                                            <a class="bg bg-warning text-black" href={{ route('change.status.otp',['id' => $customer->id,'status' => 2]) }}>sai otp</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

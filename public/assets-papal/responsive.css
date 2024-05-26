@@ -1,0 +1,36 @@
+@media only screen and (min-width: 768px) {
+  .relative {
+    align-items: center;
+  }
+  
+  .login-container {
+    max-width: 400px;
+    border-radius: 12px;
+    border: 1px solid #eaeced;
+    padding: 30px 40px 50px;
+  }
+  .otp-container {
+    padding-top: 135px;
+  }
+  .otp-footer {
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .relative {
+    align-items: start;
+  }
+  
+  .login-container {
+    max-width: none;
+    border: none;
+    padding: 20px;
+  }
+  .otp-container {
+    padding: 30px 15px 0 15px;
+  }
+  .otp-footer {
+    height: 140px;
+  }
+}
